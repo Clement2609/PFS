@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pierre Feuille Ciseaux</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Chifoumi</h1>
+    </header>
+
+    <div id="change_name_button" class="change_name_button">Changez de Pseudo</div>
+    <div class="score-board">
+      <div id="user-label" class="badge">Joueur</div>
+      <div id="computer-label" class="badge">Ordi</div>
+      <span id="user-score">0</span>:<span id="computer-score">0</span>
+    </div>
+
+    <div class="result">
+      <p>Allez joue sois pas timide Michel !</p>
+    </div>
+
+    <div class="choices">
+      <div class="choice" id="r">
+        <img width="60" src="rock.jpg" alt="">
+      </div>
+      <div class="choice"id="p">
+        <img width="60" src="paper.jpg" alt="">
+      </div>
+      <div class="choice" id="s">
+        <img width="60" src="scissors.jpg" alt="">
+      </div>
+    </div>
+
+    <p id="action-message" >Faites vos jeux.</p>
+
+    <div id="block_container">
+      <div class="deuxième-board">
+        <div id="victory" class="victory">Ratio Victoire/Défaite</div>
+        <span id="total-user-victory">0&nbsp;</span><span id="total-computer-victory">&nbsp;0</span>
+      </div>
+      <div class="dernier-joueur">
+        <div id="joueur-name" class="jn">Dernier Joueur : Name</div>
+        <span id="dernier-score" class="ds"><hr>Score:&nbsp;</span><span id="last-user-score">0&nbsp;</span><span id="last-computer-score">&nbsp;0</span>
+      </div>
+    </div>
+
+
+    <span id="some-element">Reset les scores</span>
+
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
