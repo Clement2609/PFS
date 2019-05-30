@@ -37,8 +37,8 @@ const dernier_computer = document.getElementById('last-computer-score');
 
   function cheat() {
     rajoute10pts.addEventListener("click", function() {
-      dernier_user_score = userTotal + 10;
-      dernier_user.innerHTML = userTotal + 10 + '&nbsp;';
+      dernier_user_score += 10;
+      dernier_user.innerHTML = dernier_user_score + '&nbsp;';
     })
   }
   cheat();
