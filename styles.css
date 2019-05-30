@@ -21,6 +21,7 @@
     background-color: #24272E;
   }
 
+/* Truc du haut */
   .change_name_button {
     position: absolute;
     top: 30px;
@@ -34,6 +35,24 @@
   }
 
   .change_name_button:hover {
+    cursor: pointer;
+    color: deepskyblue;
+    text-decoration: none;
+  }
+
+.change_adv_button {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color: #E2584D;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Asap, sans-serif;
+    text-decoration: underline;
+    text-decoration-color: black;
+  }
+
+  .change_adv_button:hover {
     cursor: pointer;
     color: deepskyblue;
     text-decoration: none;
@@ -112,6 +131,23 @@
   }
 
   #some-element:hover {
+    cursor: pointer;
+    color: deepskyblue;
+    font-weight: bold;
+  }
+
+#cheat {
+    text-align: center;
+    margin-left: 60px;
+    color: white;
+    font-family: Asap, sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+    text-decoration: underline;
+    text-decoration-color: #E2584D;
+  }
+
+  #cheat:hover {
     cursor: pointer;
     color: deepskyblue;
     font-weight: bold;
