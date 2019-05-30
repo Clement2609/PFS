@@ -10,8 +10,10 @@ const computerScore_span = document.getElementById('computer-score');
 const total_user_vic = document.getElementById('total-user-victory');
 const total_computer_vic = document.getElementById('total-computer-victory');
 const reset = document.getElementById('some-element');
+const rajoute10pts = document.getElementById('cheat');
 
 const pseudo = document.getElementById('change_name_button');
+const pseudo_adv = document.getElementById('change_adv_button');
 const scoreBoard_div = document.querySelector(".score-board");
 const result_p = document.querySelector(".result > p");
 
@@ -22,24 +24,45 @@ const scissors_div = document.getElementById('s');
 const title_change = document.getElementById('action-message');
 
 const nameUser = document.getElementById('user-label');
+const nameAdv = document.getElementById('computer-label');
 const dernier_joueur_name = document.getElementById('joueur-name');
 const dernier_user = document.getElementById('last-user-score');
 const dernier_computer = document.getElementById('last-computer-score');
 
   var name = prompt("Dis-moi ton nom : ")
+  var adversaire = prompt("Choisi le nom de ton adversaire : ")
   nameUser.innerHTML = name;
   dernier_joueur_name.innerHTML = "Dernier Joueur : " + name;
+  nameAdv.innerHTML = adversaire;
+
+  function cheat() {
+    rajoute10pts.addEventListener("click", function() {
+      dernier_user_score = userTotal + 10;
+      dernier_user.innerHTML = userTotal + 10 + '&nbsp;';
+    })
+  }
+  cheat();
 
   function changerPseudo() {
     pseudo.addEventListener("click", function() {
-      var name = prompt("Dis-moi ton nom : ")
+      var name = prompt("Change ton nom Carotte : ")
       nameUser.innerHTML = name;
     })
   }
   changerPseudo();
-  
+
+  function changerAdvPseudo() {
+    pseudo_adv.addEventListener("click", function() {
+      var adversaire = prompt("Change le nom de l'autre d'en face : ")
+      nameAdv.innerHTML = adversaire;
+    })
+  }
+  changerAdvPseudo();
+
   function resetScore() {
     reset.addEventListener("click", function() {
+      var name = nameUser.innerHTML;
+      dernier_joueur_name.innerHTML = "Dernier Joueur : " + name;
       dernier_user_score = userTotal;
       dernier_computer_score = computerTotal;
       dernier_user.innerHTML = userTotal + '&nbsp;';
