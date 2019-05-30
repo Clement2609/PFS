@@ -70,6 +70,7 @@ const Highest_Score_ordi = document.getElementById('high-score-ordi');
 
   function highScore() {
     if (dernier_user_score - dernier_computer_score > highest_score_value - highest_score_value2) {
+      var name = prompt("Meilleur Score de ? : ");
       Name_Highest_Score.innerHTML = name + "&nbsp;";
       highest_score_value = dernier_user_score;
       highest_score_value2 = dernier_computer_score;
