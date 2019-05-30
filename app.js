@@ -4,6 +4,8 @@ let userTotal = 0;
 let computerTotal = 0;
 let dernier_user_score = 0;
 let dernier_computer_score = 0;
+let highest_score_value = 0;
+let highest_score_value2 = 0;
 
 const userScore_span = document.getElementById('user-score');
 const computerScore_span = document.getElementById('computer-score');
@@ -29,6 +31,10 @@ const dernier_joueur_name = document.getElementById('joueur-name');
 const dernier_user = document.getElementById('last-user-score');
 const dernier_computer = document.getElementById('last-computer-score');
 
+const Name_Highest_Score = document.getElementById('high-score-name');
+const Highest_Score_user = document.getElementById('high-score-score');
+const Highest_Score_ordi = document.getElementById('high-score-ordi');
+
   function name_score_board() {
     var name = prompt("Dis-moi ton nom : ")
     var adversaire = prompt("Choisi le nom de ton adversaire : ")
@@ -36,7 +42,7 @@ const dernier_computer = document.getElementById('last-computer-score');
     dernier_joueur_name.innerHTML = "Dernier Joueur : " + name;
     nameAdv.innerHTML = adversaire;
   }
-  name_score_board();
+ name_score_board();
 
   function cheat() {
     rajoute10pts.addEventListener("click", function() {
@@ -62,6 +68,16 @@ const dernier_computer = document.getElementById('last-computer-score');
   }
   changerAdvPseudo();
 
+  function highScore() {
+    if (dernier_user_score - dernier_computer_score > highest_score_value - highest_score_value2) {
+      Name_Highest_Score.innerHTML = name + "&nbsp;";
+      highest_score_value = dernier_user_score;
+      highest_score_value2 = dernier_computer_score;
+      Highest_Score_user.innerHTML = dernier_user_score + "&nbsp;"
+      Highest_Score_ordi.innerHTML = dernier_computer_score + "&nbsp";
+    }
+  }
+
   function resetScore() {
     reset.addEventListener("click", function() {
       var name = nameUser.innerHTML;
@@ -70,6 +86,7 @@ const dernier_computer = document.getElementById('last-computer-score');
       dernier_computer_score = computerTotal;
       dernier_user.innerHTML = userTotal + '&nbsp;';
       dernier_computer.innerHTML = '&nbsp;' + computerTotal;
+      highScore();
       userTotal = 0;
       computerTotal = 0;
       total_user_vic.innerHTML = 0 + "&nbsp;";
