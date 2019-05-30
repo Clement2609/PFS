@@ -29,11 +29,14 @@ const dernier_joueur_name = document.getElementById('joueur-name');
 const dernier_user = document.getElementById('last-user-score');
 const dernier_computer = document.getElementById('last-computer-score');
 
-  var name = prompt("Dis-moi ton nom : ")
-  var adversaire = prompt("Choisi le nom de ton adversaire : ")
-  nameUser.innerHTML = name;
-  dernier_joueur_name.innerHTML = "Dernier Joueur : " + name;
-  nameAdv.innerHTML = adversaire;
+  function name_score_board() {
+    var name = prompt("Dis-moi ton nom : ")
+    var adversaire = prompt("Choisi le nom de ton adversaire : ")
+    nameUser.innerHTML = name;
+    dernier_joueur_name.innerHTML = "Dernier Joueur : " + name;
+    nameAdv.innerHTML = adversaire;
+  }
+  name_score_board();
 
   function cheat() {
     rajoute10pts.addEventListener("click", function() {
